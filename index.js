@@ -247,6 +247,7 @@ program
   .option('--daily', 'Show only once per day (great for .bashrc)')
   .option('--add-quote <quote>', 'Add a custom motivational quote to your collection')
   .option('--list-quotes', 'List all quotes in your collection')
+  .option('--reset-quotes', 'Reset quotes collection to default quotes')
   .parse(process.argv);
 
 const options = program.opts();
@@ -263,6 +264,11 @@ async function main() {
   
   if (options.listQuotes) {
     listQuotes();
+    return;
+  }
+  
+  if (options.resetQuotes) {
+    resetQuotes();
     return;
   }
   

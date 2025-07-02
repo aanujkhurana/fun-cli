@@ -58,6 +58,7 @@ life-clock --list-quotes
 --daily                      Show only once per day (great for .bashrc or .zshrc)
 --add-quote <quote>          Add a custom motivational quote to your collection
 --list-quotes                List all quotes in your collection
+--reset-quotes               Reset quotes collection to default quotes
 -V, --version                Output the version number
 -h, --help                   Display help for command
 ```
@@ -93,9 +94,12 @@ life-clock --add-quote "Your time is limited, don't waste it living someone else
 
 # View all your quotes
 life-clock --list-quotes
+
+# Reset to default quotes
+life-clock --reset-quotes
 ```
 
-Your quotes are stored in `~/.life-clock/quotes.json` and will be randomly displayed each time you run the tool.
+Your quotes are stored in `~/.life-clock/quotes.json` and will be randomly displayed each time you run the tool. If you don't add any custom quotes, the tool will use its built-in collection of motivational quotes.
 
 ## 🤝 Contributing
 

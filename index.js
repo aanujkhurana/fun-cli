@@ -55,8 +55,6 @@ function getLocalQuotes() {
 // Get random quote
 function getRandomQuote() {
   const quotes = getLocalQuotes();
-  // Log the number of quotes available for debugging
-  console.log(`Debug: Found ${quotes.length} quotes in collection`);
   return quotes[Math.floor(Math.random() * quotes.length)];
 }
 

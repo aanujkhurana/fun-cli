@@ -117,16 +117,10 @@ function hasShownToday() {
 }
 
 // Display life clock
-function displayLifeClock(birthdate, lifeExpectancy, barWidth) {
+function displayLifeClock(birthdate, lifeExpectancy, barWidth, barPosition = 'default') {
   const { years, progressPercentage, formattedPercentage } = calculateLifeProgress(birthdate, lifeExpectancy);
   const progressBar = generateProgressBar(progressPercentage, barWidth);
   const quote = getRandomQuote();
-  
-  console.log('');
-  console.log(chalk.cyan(`🎉 You're ${chalk.bold(years)} years old`));
-  console.log(chalk.cyan(`🧬 Estimated lifespan: ${chalk.bold(lifeExpectancy)} years`));
-  console.log(chalk.cyan(`📊 Progress: ${chalk.bold(formattedPercentage)}% of life lived`));
-  console.log('');
   
   // Color the progress bar based on percentage
   let coloredBar;
@@ -140,9 +134,19 @@ function displayLifeClock(birthdate, lifeExpectancy, barWidth) {
     coloredBar = chalk.red(progressBar);
   }
   
-  console.log(coloredBar);
   console.log('');
-  
+  if (barPosition === 'top') {
+    console.log(coloredBar);
+    console.log('');
+  }
+  console.log(chalk.cyan(`🎉 You're ${chalk.bold(years)} years old`));
+  console.log(chalk.cyan(`🧬 Estimated lifespan: ${chalk.bold(lifeExpectancy)} years`));
+  console.log(chalk.cyan(`📊 Progress: ${chalk.bold(formattedPercentage)}% of life lived`));
+  console.log('');
+  if (barPosition !== 'top') {
+    console.log(coloredBar);
+    console.log('');
+  }
   console.log(chalk.magenta(`💡 ${chalk.italic(quote)}`));
   console.log('');
 }
@@ -248,6 +252,7 @@ program
   .option('--add-quote <quote>', 'Add a custom motivational quote to your collection')
   .option('--list-quotes', 'List all quotes in your collection')
   .option('--reset-quotes', 'Reset quotes collection to default quotes')
+  .option('--bar-position <position>', 'Position of the progress bar (top or default)', 'default')
   .parse(process.argv);
 
 const options = program.opts();
@@ -318,7 +323,7 @@ async function main() {
   }
   
   // Display the life clock
-  displayLifeClock(birthdate, lifeExpectancy, barWidth);
+  displayLifeClock(birthdate, lifeExpectancy, barWidth, options.barPosition);
 }
 
 main().catch(err => {

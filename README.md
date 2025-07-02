@@ -7,7 +7,7 @@ Whether you're planning your next big project or just need a gentle reminder to 
 
 ## Why This Exists
 
-Time is our most valuable asset — and most of us forget how little we have. life-clock is a gentle, visual nudge to make every day matter. Inspired by Tim Urban’s "Life in Weeks" and the Stoic idea of memento mori.
+Time is our most valuable asset — and most of us forget how little we have. life-clock is a gentle, visual nudge to make every day matter. Inspired by Tim Urban's "Life in Weeks" and the Stoic idea of memento mori.
 
 ## ✨ Features
 
@@ -43,6 +43,9 @@ life-clock --dob 1990-01-01 --expectancy 85
 # Customize progress bar width (default: 30)
 life-clock --dob 1990-01-01 --width 40
 
+# Change progress bar position to top
+life-clock --dob 1990-01-01 --bar-position top
+
 # Show only once per day (great for .bashrc or .zshrc)
 life-clock --dob 1990-01-01 --daily
 
@@ -64,6 +67,7 @@ life-clock --list-quotes
 --add-quote <quote>          Add a custom motivational quote to your collection
 --list-quotes                List all quotes in your collection
 --reset-quotes               Reset quotes collection to default quotes
+--bar-position <position>    Position of the progress bar (top or default; default: default)
 -V, --version                Output the version number
 -h, --help                   Display help for command
 ```

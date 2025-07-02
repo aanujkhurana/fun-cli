@@ -1,6 +1,6 @@
 {
   "name": "life-clock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool that visualizes the progress of your life based on your birthdate with a clean progress bar and motivational insights",
   "main": "index.js",
   "bin": {

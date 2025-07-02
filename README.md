@@ -1,8 +1,13 @@
 # life-clock
+### ⏳ "See how far you've come. And how far to go."
 
-A simple CLI tool that visualizes the progress of your life based on your birthdate — with a clean progress bar and motivational insights. It's a fun and reflective way to stay mindful of time.
+life-clock is a simple CLI tool that visualizes the progress of your life based on your birthdate — with a clean progress bar and motivational insights. It's a fun and reflective way to stay mindful of time.
 
 Whether you're planning your next big project or just need a gentle reminder to live intentionally, life-clock turns your terminal into a philosophical time tracker.
+
+## Why This Exists
+
+Time is our most valuable asset — and most of us forget how little we have. life-clock is a gentle, visual nudge to make every day matter. Inspired by Tim Urban’s "Life in Weeks" and the Stoic idea of memento mori.
 
 ## ✨ Features
 
@@ -62,7 +67,7 @@ life-clock --list-quotes
 -h, --help                   Display help for command
 ```
 
-## 📸 Screenshot
+## Ouput
 
 ```
 🎉 You're 29 years old
@@ -80,7 +85,7 @@ Add to your shell profile for a daily reminder of life's progress:
 
 ```bash
 # Add to your .bashrc, .zshrc, or equivalent
-life-clock --dob 1995-06-15 --daily
+life-clock --dob 1997-03-14 --daily
 ```
 
 ## 💬 Custom Quotes
@@ -100,7 +105,3 @@ Your quotes are stored in `~/.life-clock/quotes.json` and will be randomly displ
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-## 📝 License
-
-ISC

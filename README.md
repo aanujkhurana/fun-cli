@@ -9,7 +9,7 @@ Whether you're planning your next big project or just need a gentle reminder to 
 - 🔢 Calculates exact age in years
 - 🟦 Displays life progress bar (customizable width)
 - 📅 Assumes average life expectancy (default 79 years, override with flag)
-- 💡 Shows random motivational quote
+- 💡 Shows random motivational quote (with support for custom quotes)
 - 🔄 Option to show only once per day (perfect for .bashrc or .zshrc)
 
 ## 📦 Installation
@@ -40,6 +40,12 @@ life-clock --dob 1990-01-01 --width 40
 
 # Show only once per day (great for .bashrc or .zshrc)
 life-clock --dob 1990-01-01 --daily
+
+# Add a custom motivational quote
+life-clock --add-quote "Every day is a new opportunity to change your life."
+
+# List all your saved quotes
+life-clock --list-quotes
 ```
 
 ## 🔧 Options
@@ -50,6 +56,8 @@ life-clock --dob 1990-01-01 --daily
 -e, --expectancy <years>     Life expectancy in years (default: 79)
 -w, --width <characters>     Width of the progress bar (default: 30)
 --daily                      Show only once per day (great for .bashrc or .zshrc)
+--add-quote <quote>          Add a custom motivational quote to your collection
+--list-quotes                List all quotes in your collection
 -V, --version                Output the version number
 -h, --help                   Display help for command
 ```
@@ -74,6 +82,20 @@ Add to your shell profile for a daily reminder of life's progress:
 # Add to your .bashrc, .zshrc, or equivalent
 life-clock --dob 1995-06-15 --daily
 ```
+
+## 💬 Custom Quotes
+
+You can add your own motivational quotes to personalize your experience:
+
+```bash
+# Add a custom quote
+life-clock --add-quote "Your time is limited, don't waste it living someone else's life."
+
+# View all your quotes
+life-clock --list-quotes
+```
+
+Your quotes are stored in `~/.life-clock/quotes.json` and will be randomly displayed each time you run the tool.
 
 ## 🤝 Contributing
 

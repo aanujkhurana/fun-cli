@@ -212,6 +212,30 @@ function listQuotes() {
   console.log(''); // Empty line at the end
 }
 
+// Reset quotes collection to defaults
+function resetQuotes() {
+  const dataDir = path.join(os.homedir(), '.life-clock');
+  const quotesFile = path.join(dataDir, 'quotes.json');
+  
+  // Create directory if it doesn't exist
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+  
+  try {
+    // Delete the quotes file if it exists
+    if (fs.existsSync(quotesFile)) {
+      fs.unlinkSync(quotesFile);
+    }
+    
+    console.log(chalk.green('\n✅ Quotes collection has been reset to defaults\n'));
+    return true;
+  } catch (error) {
+    console.error(chalk.red('\n❌ Error: Could not reset quotes collection'), error);
+    return false;
+  }
+}
+
 // Set up command line options
 program
   .version('1.0.0')

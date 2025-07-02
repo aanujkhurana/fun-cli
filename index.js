@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
 const chalk = require('chalk');
-const figlet = require('figlet');
-const gradient = require('gradient-string');
 const { program } = require('commander');
 const inquirer = require('inquirer');
 const moment = require('moment');

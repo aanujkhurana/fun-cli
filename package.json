@@ -1,0 +1,34 @@
+{
+  "name": "life-clock",
+  "version": "1.0.0",
+  "description": "CLI tool that visualizes the progress of your life based on your birthdate with a clean progress bar and motivational insights",
+  "main": "index.js",
+  "bin": {
+    "life-clock": "./index.js"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "prepublishOnly": "npm test",
+    "postinstall": "node install.js",
+    "publish-npm": "node publish.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aanujkhurana/fun-cli.git"
+  },
+  "keywords": ["cli", "life", "clock", "progress", "motivation", "birthdate", "age", "terminal", "visualization"],
+  "author": "Aanuj Khurana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aanujkhurana/fun-cli/issues"
+  },
+  "homepage": "https://github.com/aanujkhurana/fun-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "figlet": "^1.8.1",
+    "gradient-string": "^2.0.2",
+    "inquirer": "^8.2.6",
+    "moment": "^2.30.1"
+  }
+}

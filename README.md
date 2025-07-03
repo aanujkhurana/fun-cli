@@ -1,4 +1,5 @@
-# life-clock - ⏳ "See how far you've come. And how far to go."
+# life-clock - 
+## ⏳ "See how far you've come. And how far to go."
 
 life-clock is a simple CLI tool that visualizes the progress of your life based on your birthdate — with a clean progress bar and motivational insights. It's a fun and reflective way to stay mindful of time.
 

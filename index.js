@@ -63,14 +63,18 @@ function calculateLifeProgress(birthdate, lifeExpectancy) {
   
   // Calculate exact age
   const years = today.diff(birth, 'years');
+  const days = today.diff(birth, 'days');
+  const minutes = today.diff(birth, 'minutes');
   
   // Calculate progress percentage
-  const ageInDays = today.diff(moment(birthdate, 'YYYY-MM-DD'), 'days');
+  const ageInDays = days;
   const totalDays = lifeExpectancy * 365.25; // Account for leap years
   const progressPercentage = (ageInDays / totalDays) * 100;
   
   return {
     years,
+    days,
+    minutes,
     progressPercentage: Math.min(progressPercentage, 100), // Cap at 100%
     formattedPercentage: Math.min(progressPercentage, 100).toFixed(1) // Formatted with 1 decimal place
   };
@@ -116,7 +120,7 @@ function hasShownToday() {
 
 // Display life clock
 function displayLifeClock(birthdate, lifeExpectancy, barWidth, barPosition = 'default') {
-  const { years, progressPercentage, formattedPercentage } = calculateLifeProgress(birthdate, lifeExpectancy);
+  const { years, days, minutes, progressPercentage, formattedPercentage } = calculateLifeProgress(birthdate, lifeExpectancy);
   const progressBar = generateProgressBar(progressPercentage, barWidth);
   const quote = getRandomQuote();
   
@@ -137,7 +141,7 @@ function displayLifeClock(birthdate, lifeExpectancy, barWidth, barPosition = 'de
     console.log(coloredBar);
     console.log('');
   }
-  console.log(chalk.cyan(`🎉 You're ${chalk.bold(years)} years old`));
+  console.log(chalk.cyan(`🎉 You're ${chalk.bold(years)} years old, ${chalk.bold(days)} days, ${chalk.bold(minutes)} minutes`));
   console.log(chalk.cyan(`🧬 Estimated lifespan: ${chalk.bold(lifeExpectancy)} years`));
   console.log(chalk.cyan(`📊 Progress: ${chalk.bold(formattedPercentage)}% of life lived`));
   console.log('');

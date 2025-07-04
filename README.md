@@ -8,7 +8,7 @@ Whether you're planning your next big project or just need a gentle reminder to 
 ### Ouput
 
 ```
-🎉 You're 29 years old
+🎉 You're 30 years old, 10977 days, 15808117 minutes
 🧬 Estimated lifespan: 79 years
 📊 Progress: 36.7% of life lived
 

@@ -1,9 +1,22 @@
 # life-clock
-### ⏳ "See how far you've come. And how far to go."
+## ⏳ "See how far you've come. And how far to go."
 
 life-clock is a simple CLI tool that visualizes the progress of your life based on your birthdate — with a clean progress bar and motivational insights. It's a fun and reflective way to stay mindful of time.
 
 Whether you're planning your next big project or just need a gentle reminder to live intentionally, life-clock turns your terminal into a philosophical time tracker.
+
+### Ouput
+
+```
+🎉 You're 29 years old
+🧬 Estimated lifespan: 79 years
+📊 Progress: 36.7% of life lived
+
+███████████░░░░░░░░░░░░░░░░░░  36.7%
+
+💡 Make it count. Start something today.
+```
+
 
 ## Why This Exists
 
@@ -70,18 +83,6 @@ life-clock --list-quotes
 --bar-position <position>    Position of the progress bar (top or default; default: default)
 -V, --version                Output the version number
 -h, --help                   Display help for command
-```
-
-## Ouput
-
-```
-🎉 You're 29 years old
-🧬 Estimated lifespan: 79 years
-📊 Progress: 36.7% of life lived
-
-███████████░░░░░░░░░░░░░░░░░░  36.7%
-
-💡 Make it count. Start something today.
 ```
 
 ## 🔄 Daily Reminder
